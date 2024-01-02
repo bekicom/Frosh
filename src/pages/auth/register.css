@@ -10,7 +10,8 @@
 
 .register-card {
   width: 1614px;
-  height: 908px;
+  height: calc(100% - 192px);
+
   flex-shrink: 0;
   border-radius: 57px;
   background: rgba(255, 255, 255, 0.7);
@@ -66,7 +67,7 @@
   line-height: normal;
 }
 
-.reg-card-register > form > input {
+.reg-card-register form input {
   width: 574px;
   height: 91px;
   flex-shrink: 0;
@@ -83,7 +84,7 @@
   line-height: normal;
 }
 
-::placeholder {
+.reg-card-register > ::placeholder {
   color: rgba(93, 102, 97, 0.5);
   font-family: Poppins;
   font-size: 36.65px;
