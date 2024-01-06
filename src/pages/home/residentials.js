@@ -1,6 +1,9 @@
 import React, { useCallback, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 import { ReactComponent as Arrow } from 'assets/svgs/arrow.svg';
 
 const Residentials = () => {
@@ -27,7 +30,7 @@ const Residentials = () => {
             <Arrow />
           </button>
         </div>
-        <Swiper ref={sliderRef}>
+        <Swiper ref={sliderRef} autoplay={{ delay: 2500 }} loop navigation={true} modules={[Autoplay, Pagination, Navigation]}>
           <SwiperSlide className="slide-item">
             <img src={require('../../assets/images/residents-slide.png')} alt="residents" />
           </SwiperSlide>

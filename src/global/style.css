@@ -12,6 +12,8 @@
   --black: #363636;
   --light: #e7e7e7;
   --dimmed: #b7c9b3;
+  --swiper-pagination-color: #fff;
+  --swiper-pagination-bullet-inactive-color: #e4e4e4;
 }
 
 * {
@@ -27,6 +29,7 @@
 
 .container {
   max-width: 1920px;
+  padding: 0 180px;
   margin: 0 auto;
 }
 
