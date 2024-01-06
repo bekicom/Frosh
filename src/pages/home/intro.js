@@ -1,32 +1,18 @@
-import React from 'react';
-import { ReactComponent as Filter } from 'assets/svgs/filter.svg';
 import { ReactComponent as Search } from 'assets/svgs/search.svg';
-
-const filters = [
-  { label: 'Sotish', value: 'sell' },
-  { label: 'Turar joy majmuasi', value: 'resident_complex' },
-  { label: 'Ijara', value: 'rent' }
-];
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const Intro = () => {
-  const seelectFilter = (
-    <div className="filter">
-      <button type="button">
-        <Filter />
-        <span>Filter</span>
-      </button>
-      <ul className="select-options">
-        {filters.map((item) => (
-          <li key={item.value}>{item.label}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  const { handleSubmit, register, reset } = useForm({ defaultValues: { search: '' } });
+
+  const onSubmit = (values) => {
+    toast.info(values.search);
+    reset();
+  };
 
   const searchBar = (
     <div className="search-bar">
-      {seelectFilter}
-      <input type="text" placeholder="Qidirish" />
+      <input type="text" placeholder="Qidirish" {...register('search', { required: true })} />
       <button type="submit">
         <Search />
       </button>
@@ -37,7 +23,9 @@ const Intro = () => {
     <div className="intro">
       <div className="content">
         <h2 className="title"> {'Keling sizning orzuyingizdagi\nuyni topaylik!'} </h2>
-        <form className="form">{searchBar}</form>
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+          {searchBar}
+        </form>
       </div>
     </div>
   );
