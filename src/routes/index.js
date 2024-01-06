@@ -1,4 +1,4 @@
-import Register from 'pages/auth/register';
+import Auth from 'pages/auth/Auth';
 import Home from 'pages/home';
 
 export const routes = [
@@ -7,7 +7,7 @@ export const routes = [
     element: <Home />
   },
   {
-    path: '/register',
-    element: <Register />
+    path: '/auth',
+    element: <Auth />
   }
 ];
