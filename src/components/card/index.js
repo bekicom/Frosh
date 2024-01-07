@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 import './style.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -10,14 +10,28 @@ import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
 export const Card = ({ item }) => {
+  const swiperRef = useRef(null);
+  const slideToIndex = useCallback((index) => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(index);
+    }
+  }, []);
+
+  const navigation = (_, index) => (
+    <button onMouseEnter={() => slideToIndex(index)} key={index}>
+      {index}
+    </button>
+  );
   return (
     <Link to={'#'} className="card">
       <header className="card-top">
+        <div className="overlay">{[1, 2, 3].map(navigation)}</div>
         <div className="badge">
           <p>TOP</p>
         </div>
         <Swiper
-          autoplay={{ delay: 2000 }}
+          ref={swiperRef}
+          autoplay={{ delay: 3000 }}
           pagination={{ clickable: true }}
           loop
           navigation={true}

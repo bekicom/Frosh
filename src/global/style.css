@@ -6,12 +6,14 @@
   --success: #2ecc71;
   --error: #e74c3c;
   --warn: #f39c12;
-  --info: #3498db;
-  --primary: #73af00;
+  --info: #73af00;
+  --primary: #0085af;
   --secondary: #5d6661;
   --black: #363636;
   --light: #e7e7e7;
+  --light-2: #f2f2f2;
   --dimmed: #b7c9b3;
+  --primary-2: #3498db;
   --swiper-pagination-color: #fff;
   --swiper-pagination-bullet-inactive-color: #e4e4e4;
 }

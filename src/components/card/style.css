@@ -93,5 +93,16 @@
 }
 
 .card .card-body .address {
-    text-wrap: balance;
+  text-wrap: balance;
+}
+
+.card .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 2;
+}
+.card .overlay button {
+  flex: 1;
+  opacity: 0;
 }
