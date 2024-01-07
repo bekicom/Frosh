@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Person() {
+export default function UserDashboard() {
   return (
     <div className="person">
       <div className="p-left">

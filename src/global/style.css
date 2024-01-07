@@ -64,3 +64,34 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* pagination */
+
+.paginations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 56px 0px;
+  width: 100%;
+}
+
+.paginations button {
+  border-radius: 11px;
+  background: var(--swiper-pagination-bullet-inactive-color);
+  box-shadow: 0px 2px 3.8px 0px rgba(0, 0, 0, 0.25);
+  color: var(--secondary);
+  font-size: 22.65px;
+  font-weight: 400;
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--swiper-pagination-bullet-inactive-color);
+  transition: 300ms ease;
+}
+
+.paginations button.active {
+  border-radius: 11px;
+  border-color: var(--primary-2);
+  background: var(--light-2);
+  translate: 0px -3px;
+}

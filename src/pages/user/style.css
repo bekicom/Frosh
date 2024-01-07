@@ -1,29 +1,21 @@
-.Personinfo {
-  width: 100%;
-  height: 100%;
-  background: #fff;
+.personinfo {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
-  padding: 123px 180px;
 }
 
 .personleft {
-  width: 70%;
-  background-color: rgb(206, 22, 22);
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .personright {
-  width: 556px;
-  /* height: 100vh; */
-  /* background-color: rebeccapurple; */
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 16px;
+  position: sticky;
+  top: 60px;
 }
 .personright > button {
   width: 300px;
@@ -108,73 +100,76 @@
   font-weight: 400;
   line-height: normal;
 }
-.p-right{
+.p-right {
   width: 394px;
   display: flex;
   align-items: center;
 }
 .p-right > span {
- color: #5D6661;
-text-align: center;
-font-size: 36.65px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #5d6661;
+  text-align: center;
+  font-size: 36.65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .p-left > form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   gap: 27px;
   padding: 33px 66px 33px 45px;
 }
-.p-left > form > label{
+.p-left > form > label {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #5D6661;
-font-size: 36.65px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #5d6661;
+  font-size: 36.65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.p-left > form >button{
-display: inline-flex;
-padding: 8px 54px;
-align-items: center;
-gap: 23px;
-border-radius: 11px;
-background: #3498DB;
-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.50);
+.p-left > form > button {
+  display: inline-flex;
+  padding: 8px 54px;
+  align-items: center;
+  gap: 23px;
+  border-radius: 11px;
+  background: #3498db;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
 
-color: #FFF;
-font-family: Poppins;
-font-size: 36.65px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 36.65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-form > label >input{
+form > label > input {
   width: 416px;
-height: 64px;
-flex-shrink: 0;
-border-radius: 11px;
-background: #FFF;
-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.50);
-background: none;
-text-align: center;
-color: #5D6661;
-font-family: Poppins;
-font-size: 36.65px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+  background: none;
+  text-align: center;
+  color: #5d6661;
+  font-size: 36.65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-
+.cards-container {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+}
 
 /* person page end */
