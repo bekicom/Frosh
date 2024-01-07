@@ -1,25 +1,30 @@
 export const createPagination = (currentPage, lastPage) => {
-  const delta = 2;
-  const left = currentPage - delta;
-  const right = currentPage + delta + 1;
+  let current = currentPage;
+  let last = lastPage;
+  let delta = 2;
+  let left = current - delta;
+  let right = current + delta + 1;
+  let range = [];
+  let rangeWithDots = [];
+  let l;
 
-  const rangeWithDots = [];
+  for (let i = 1; i <= last; i++) {
+    if (i === 1 || i === last || (i >= left && i < right)) {
+      range.push(i);
+    }
+  }
 
-  const addPage = (page) => rangeWithDots.push(page);
-  const addDots = () => rangeWithDots.push('...');
-
-  addPage(1);
-
-  left > 2 && (left > 3 ? addDots() : addPage(2));
-
-  const startPage = Math.max(2, left);
-  const endPage = Math.min(right, lastPage);
-
-  Array.from({ length: endPage - startPage }, (_, index) => startPage + index).forEach((page) => addPage(page));
-
-  right < lastPage - 1 && (right < lastPage - 2 ? addDots() : addPage(lastPage - 1));
-
-  lastPage > 1 && addPage(lastPage);
+  for (let i of range) {
+    if (l) {
+      if (i - l === 2) {
+        rangeWithDots.push(l + 1);
+      } else if (i - l !== 1) {
+        rangeWithDots.push('...');
+      }
+    }
+    rangeWithDots.push(i);
+    l = i;
+  }
 
   return rangeWithDots;
 };

@@ -10,15 +10,15 @@ const Announcements = () => {
       <h2 className="title">{'Top E’lonlar'}</h2>
       <div className={`cards-container ${data?.length / 4 ? 'justify-between' : ''}`}>
         {[...data].splice(currentPage, 8)?.map((_, key) => (
-          <Card key={key + currentPage} item={key + currentPage} />
+          <Card key={_ + key} item={key + _} />
         ))}
       </div>
       <div className="paginations">
-        {createPagination(currentPage, 800 / 8).map((item) => (
+        {createPagination(currentPage, 800 / 8).map((item, key) => (
           <button
-            key={item}
+            key={item + key}
             onClick={() => setCurrentPage(item === '...' ? currentPage : item)}
-            className={currentPage === item && 'active'}
+            className={currentPage === item ? 'active' : undefined}
           >
             {item}
           </button>

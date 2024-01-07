@@ -23,34 +23,36 @@ export const Card = ({ item }) => {
     </button>
   );
   return (
-    <Link to={'#'} className="card">
+    <div className="card">
       <header className="card-top">
-        <div className="overlay">{[1, 2, 3].map(navigation)}</div>
-        <div className="badge">
+        <Link to={'/top-announcements'} className="badge">
           <p>TOP</p>
-        </div>
-        <Swiper
-          ref={swiperRef}
-          autoplay={{ delay: 3000 }}
-          pagination={{ clickable: true }}
-          loop
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-        >
-          {[1, 2, 3].map((slide) => (
-            <SwiperSlide key={slide}>
-              <img src={'https://picsum.photos/300/' + (200 + slide + item)} alt="slide-item" />
-            </SwiperSlide>
-          ))}
-          <div className="bottom-infos">
-            <div className="views">
-              <Eye />
-              <p>12</p>
+        </Link>
+        <Link to={`/announcement/${item}`}>
+          <div className="overlay">{[1, 2, 3].map(navigation)}</div>
+          <Swiper
+            ref={swiperRef}
+            autoplay={{ delay: 3000 }}
+            pagination={{ clickable: true }}
+            loop
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+          >
+            {[1, 2, 3].map((slide) => (
+              <SwiperSlide key={slide}>
+                <img src={'https://picsum.photos/300/' + (200 + slide + item)} alt="slide-item" />
+              </SwiperSlide>
+            ))}
+            <div className="bottom-infos">
+              <div className="views">
+                <Eye />
+                <p>12</p>
+              </div>
             </div>
-          </div>
-        </Swiper>
+          </Swiper>
+        </Link>
       </header>
-      <div className="card-body">
+      <Link to={`/announcement/${item}`} className="card-body">
         <p className="pice">40.000.000 uzs</p>
         <div className="row-info">
           <p>3 xona</p>
@@ -58,7 +60,7 @@ export const Card = ({ item }) => {
           <p>120 m²</p>
         </div>
         <p className="address">Namangan viloyat, Chust shaxri, mustaqillik mahalla 123 uy.</p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
