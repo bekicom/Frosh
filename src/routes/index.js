@@ -1,6 +1,8 @@
 import Auth from 'pages/auth/Auth';
 import Home from 'pages/home';
-import Personinfo from 'pages/user/dashboard';
+import Personinfo from 'pages/user';
+import Announcements from 'pages/announcements';
+import AnnouncementSingle from 'pages/announcements/single';
 
 export const routes = [
   {
@@ -14,5 +16,13 @@ export const routes = [
   {
     path: '/personinfo/*',
     element: <Personinfo />
+  },
+  {
+    path: '/announcements',
+    element: <Announcements />
+  },
+  {
+    path: '/announcement/:id',
+    element: <AnnouncementSingle />
   }
 ];
