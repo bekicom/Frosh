@@ -7,6 +7,7 @@ import elon from '../../assets/svgs/personinfo/Vector.svg';
 import sevimli from '../../assets/svgs/personinfo/announcement_xcz4wogsydjn 1.svg';
 import toldirish from '../../assets/svgs/personinfo/plus_9dsi9qqdr7o0 3.svg';
 import MyAnnouncements from './my-announcements';
+import Payme from './payme';
 
 export default function UserInfo() {
   const navigate = useNavigate();
@@ -16,6 +17,8 @@ export default function UserInfo() {
         <Routes>
           <Route index path="/" element={<Person />} />
           <Route path="/my-announcements" element={<MyAnnouncements />} />
+          <Route path="/my-announcements" element={<MyAnnouncements />} />
+          <Route path="/payyme" element={<Payme />} />
         </Routes>
       </div>
 
@@ -26,10 +29,10 @@ export default function UserInfo() {
         <button onClick={() => navigate('my-announcements')}>
           E’lonlarim <img src={sevimli} alt="" />
         </button>
-        <button>
+        <button onClick={() => navigate('my-announcements')}>
           Sevimlilar <img src={info} alt="" />
         </button>
-        <button>
+        <button onClick={() => navigate('payyme')}>
           To’ldirish
           <img src={toldirish} alt="" />
         </button>

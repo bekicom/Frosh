@@ -173,3 +173,82 @@ form > label > input {
 }
 
 /* person page end */
+
+
+
+/* payme page start */
+.payme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+}
+.payme > p {
+color: #5D6661;
+  font-size: 55.9px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.payme-click{
+  display: flex;
+  align-items: center;
+  gap: 71px;
+  padding: 25px 0 56px 0;
+}
+.payme-click > button{
+  width: 416px;
+height: 199px;
+background: none;
+border-radius: 11px;
+background: #FFF;
+box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.50);
+}
+.payme-click > button:hover{
+  border: 3px solid #3498DB;
+}
+.payme > label {
+  display: flex;
+  align-items: center;
+  color: #5D6661;
+font-family: Poppins;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-top: 14px;
+}
+.payme > label > input {
+  width: 295px;
+height: 88px;
+flex-shrink: 0;
+border-radius: 11px;
+text-align: center;
+background: #FFF;
+box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.50);
+
+color: #5D6661;
+font-family: Poppins;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.payme :nth-child(5){
+padding: 8px 54px;
+align-items: center;
+gap: 23px;
+border-radius: 11px;
+background: #3498DB;
+box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.50);
+color: #FFF;
+font-family: Poppins;
+font-size: 36.65px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 92px;
+}
+/* payme page end */
