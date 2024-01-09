@@ -3,6 +3,7 @@ import Home from 'pages/home';
 import Personinfo from 'pages/user';
 import Announcements from 'pages/announcements';
 import AnnouncementSingle from 'pages/announcements/single';
+import CreateAnnouncement from 'pages/announcements/create';
 
 export const routes = [
   {
@@ -24,5 +25,9 @@ export const routes = [
   {
     path: '/announcement/:id',
     element: <AnnouncementSingle />
+  },
+  {
+    path: '/announcement/create',
+    element: <CreateAnnouncement />
   }
 ];

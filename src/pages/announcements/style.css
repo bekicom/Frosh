@@ -64,6 +64,7 @@
     border-radius: 27px;
     user-select: none;
     height: 100%;
+    width: 100%;
   }
   .row .space .thumbs-container {
     min-height: 250px;

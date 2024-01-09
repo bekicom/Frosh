@@ -19,8 +19,6 @@ const Single = () => {
       thumbsRef.current.swiper.slideTo(index);
     }
   }, []);
-  id;
-
   const handleChange = ({ activeIndex }) => {
     slideToIndex(activeIndex);
     setActiveIndex(activeIndex);
@@ -28,7 +26,7 @@ const Single = () => {
   const sliderData = Array.from({ length: 6 }, (_, i) => i);
   return (
     <div className="container announcements">
-      <h2 className="title">Namangan, Davlatobod, 5-kichik noxiya 1-uy</h2>
+      <h2 className="title">Namangan, Davlatobod, 5-kichik noxiya 1-uy {id}</h2>
       <div className="row">
         <div className="space">
           <div className={`slider ${open ? 'open' : ''}`}>

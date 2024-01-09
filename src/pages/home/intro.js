@@ -3,16 +3,16 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
 const Intro = () => {
-  const { handleSubmit, register, reset } = useForm({ defaultValues: { search: '' } });
+  const { handleSubmit, register, reset } = useForm({ defaultValues: { 'search-bar-frosh': '' } });
 
   const onSubmit = (values) => {
-    toast.info(values.search);
+    toast.info(values['search-bar-frosh']);
     reset();
   };
 
   const searchBar = (
     <div className="search-bar">
-      <input type="text" placeholder="Qidirish" {...register('search', { required: true })} />
+      <input type="text" placeholder="Qidirish" {...register('search-bar-frosh', { required: true })} />
       <button type="submit">
         <Search />
       </button>

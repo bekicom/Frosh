@@ -19,7 +19,7 @@ const Header = () => {
           <select>
             <option>UZS</option>
           </select>
-          <button>E’lon joylash +</button>
+          <Link to={'/announcement/create'}>E’lon joylash +</Link>
         </div>
       </header>
     </div>

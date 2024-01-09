@@ -47,10 +47,11 @@
     border: none;
   }
 
-  .h-right > button {
+  .h-right > a {
     width: 225px;
     height: 46px;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: center;
     align-items: center;
     border-radius: 15px;
     background: #0085af;
