@@ -11,5 +11,10 @@ import { ReactComponent as AirCondition } from 'assets/svgs/air-condition.svg';
 import { ReactComponent as Refrigerator } from 'assets/svgs/refrigerator.svg';
 import { ReactComponent as TvIcon } from 'assets/svgs/tv.svg';
 import { ReactComponent as Washing } from 'assets/svgs/washing.svg';
+import { ReactComponent as Telegram } from 'assets/svgs/telegram.svg';
+import { ReactComponent as Instagram } from 'assets/svgs/instagram.svg';
+import { ReactComponent as Fecebook } from 'assets/svgs/fecebook.svg';
 
-export { Exit, Floor, Room, Quadrad, Home, Gas, Water, Electric, Wifi, AirCondition, Refrigerator, TvIcon, Washing };
+
+
+export { Exit, Floor, Room, Quadrad, Home, Gas, Water, Electric, Wifi, AirCondition, Refrigerator, TvIcon, Washing ,Telegram,Instagram,Fecebook};
