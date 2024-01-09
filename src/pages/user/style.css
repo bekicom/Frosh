@@ -132,6 +132,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  gap: 20px;
 }
 .p-left > form > button {
   display: inline-flex;
